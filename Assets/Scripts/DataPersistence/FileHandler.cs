@@ -7,7 +7,7 @@ using UnityEngine;
 public static class FileHandler {
 
     public static void SaveToJSON<T> (List<T> toSave, string filename) {
-        Debug.Log (GetPath (filename));
+
         string content = JsonHelper.ToJson<T> (toSave.ToArray ());
         WriteFile (GetPath (filename), content);
     }

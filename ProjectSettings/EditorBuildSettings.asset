@@ -17,6 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AddHabbitScreen.unity
     guid: 6688e4f4bc85c3f47b929ffa275d6ef8
+  - enabled: 1
+    path: Assets/Scenes/TaskScreen.unity
+    guid: 1d10afe9db8c1bc42883e5a119ea3dae
+  - enabled: 1
+    path: Assets/Scenes/HabitScreen.unity
+    guid: e3cbaf4bfb217434d96df20d1c0885ff
+  - enabled: 1
+    path: Assets/Scenes/CompletedTasksCreen.unity
+    guid: ba73f7617b4c32d4da00f4710d888bf6
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 86ed368c721e63141b1bd2540cd2003f, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: af8e88ce49b8a484a97452670aeb1264, type: 2}

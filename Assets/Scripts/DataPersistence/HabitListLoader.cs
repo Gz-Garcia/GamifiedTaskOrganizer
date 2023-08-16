@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class HabitLoader : MonoBehaviour
+public class HabitListLoader : MonoBehaviour
 {
     public GameObject habitPrefab, habitContainer;
     public List<HabitData> habits = new List<HabitData>();

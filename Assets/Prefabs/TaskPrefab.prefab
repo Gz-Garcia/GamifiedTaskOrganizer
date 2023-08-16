@@ -98,6 +98,7 @@ MonoBehaviour:
   taskName: {fileID: 6889696182188221300}
   taskObject: {fileID: 3380308552607004302}
   codeHolder: {fileID: 4602189598020031567}
+  sceneID: 3
 --- !u!114 &2924814187707892042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,10 +111,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 265ace63392a189449766336a06c9b56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredHoldTime: 0.5
+  requiredHoldTime: 0.3
   onLongClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2496184236888325857}
+        m_TargetAssemblyTypeName: TaskHandler, Assembly-CSharp
+        m_MethodName: LaunchTaskScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   fillImage: {fileID: 8347737804307441774}
 --- !u!1 &3395505871837598181
 GameObject:
