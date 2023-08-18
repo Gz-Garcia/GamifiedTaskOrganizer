@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
@@ -21,24 +22,24 @@ public class TaskHandler : MonoBehaviour
         tasks = FileHandler.ReadListFromJSON<TaskData>(filename);
     }
 
-    public void completeTask() {
+    public void completeTaskSwitch() {
         carregaLista();
 
-        int codigo = Convert.ToInt32(codeHolder.name);
+        string codigo = codeHolder.name;
         foreach (TaskData task in tasks) {
             
             if(codigo == task.tcode) {
-                task.tstate = 0;
+                if(task.tstate == 1) task.tstate = 0;
+                else task.tstate = 1;
             }
         }
 
         taskObject.SetActive(false);
         FileHandler.SaveToJSON<TaskData>(tasks, filename);
-        
     }
 
     public void LaunchTaskScreen() {
-        int codigo = Convert.ToInt32(codeHolder.name);
+        string codigo = codeHolder.name;
         MainPersistence.Instance.code = codigo;
 
         SceneManager.LoadScene(sceneID);

@@ -33,9 +33,8 @@ public class TaskListLoader : MonoBehaviour
                 ntName.text = task.tname;
 
                 GameObject codeHolder = GameObject.Find("CodeHolder");
-                codeHolder.name = task.tcode.ToString();
+                codeHolder.name = task.tcode;
             }
-
         }    
     }
 
@@ -51,9 +50,8 @@ public class TaskListLoader : MonoBehaviour
                 ntName.text = task.tname;
 
                 GameObject codeHolder = GameObject.Find("CodeHolder");
-                codeHolder.name = task.tcode.ToString();
+                codeHolder.name = task.tcode;
             }
-
         }
     }
 }

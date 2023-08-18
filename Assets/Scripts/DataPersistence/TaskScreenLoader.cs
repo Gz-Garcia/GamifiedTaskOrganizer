@@ -8,9 +8,9 @@ public class TaskScreenLoader : MonoBehaviour
 {
 
     public List<TaskData> tasks = new List<TaskData>();
-    public TMP_Text taskName, taskDesc;
+    public TMP_Text taskName, taskDesc, taskDate, taskDificulty;
     private string filename = "tarefas.json";
-    private int code = -1;
+    private string code;
 
     void Start()
     {
@@ -18,7 +18,7 @@ public class TaskScreenLoader : MonoBehaviour
         if (MainPersistence.Instance != null) {
             this.code = MainPersistence.Instance.code;
         }
-        if(code >= 0) {
+        if(code != null) {
             tasks = FileHandler.ReadListFromJSON<TaskData>(filename);
             LoadTaskScreen();
         }
@@ -30,6 +30,8 @@ public class TaskScreenLoader : MonoBehaviour
             if (task.tcode == code) {
                 taskName.text = task.tname;
                 taskDesc.text = task.tdescription;
+                taskDate.text = task.tduedate;
+                taskDificulty.text = task.tdificulty.ToString();
             }
         }
     }

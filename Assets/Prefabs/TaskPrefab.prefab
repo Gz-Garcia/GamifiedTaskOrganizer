@@ -421,8 +421,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2496184236888325857}
-        m_TargetAssemblyTypeName: TRemover, Assembly-CSharp
-        m_MethodName: completeTask
+        m_TargetAssemblyTypeName: TaskHandler, Assembly-CSharp
+        m_MethodName: completeTaskSwitch
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

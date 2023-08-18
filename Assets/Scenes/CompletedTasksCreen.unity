@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9947386895ffda148ab3e98ae52e187e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskPrefab: {fileID: 3380308552607004302, guid: c6cf5e152a0997b439604cd26111221e, type: 3}
+  taskPrefab: {fileID: 3380308552607004302, guid: 2a220dc39993fc044a69f854d339717f, type: 3}
   taskContainer: {fileID: 611900408}
   tasks: []
   loadType: 2
