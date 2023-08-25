@@ -5,7 +5,7 @@ using UnityEngine;
 public class MainPersistence : MonoBehaviour
 {
     public static MainPersistence Instance;
-    public string code;
+    public string code = "-1";
 
     private void Awake()
     {

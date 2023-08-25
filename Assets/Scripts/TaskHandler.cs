@@ -12,7 +12,6 @@ public class TaskHandler : MonoBehaviour
 {   
     public List<TaskData> tasks = new List<TaskData>();
     private string filename = "tarefas.json";
-
     public TMP_Text taskName;
     public GameObject taskObject, codeHolder;
     public int sceneID;
@@ -41,8 +40,12 @@ public class TaskHandler : MonoBehaviour
     public void LaunchTaskScreen() {
         string codigo = codeHolder.name;
         MainPersistence.Instance.code = codigo;
-
         SceneManager.LoadScene(sceneID);
     }
-    
+
+    public void LaunchEditTask() {
+        /*string codigo = codeHolder.name;
+        MainPersistence.Instance.code = codigo;*/
+        SceneManager.LoadScene(sceneID);
+    }
 }

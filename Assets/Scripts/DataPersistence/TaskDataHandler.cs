@@ -1,10 +1,10 @@
-using System.Diagnostics;
 using System.Dynamic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class TaskDataHandler : MonoBehaviour
@@ -15,7 +15,7 @@ public class TaskDataHandler : MonoBehaviour
 
     private int taskDificulty = 1;
 
-    private string filename = "tarefas.json";
+    private string filename = "tarefas.json", codigo;
 
     List<TaskData> tasks = new List<TaskData>();
 
@@ -29,11 +29,26 @@ public class TaskDataHandler : MonoBehaviour
         string taskDescription = descriptionInput.text;
         string taskDueDate = duedateInput.text;
 
-        tasks.Add(new TaskData(taskCode, taskName, taskDescription, taskDificulty, taskDueDate, "", 1));
-        nameInput.text = "";
-        descriptionInput.text = "";
+        if (MainPersistence.Instance.code != "0") {
+            Debug.Log("Edit");
+            this.codigo = MainPersistence.Instance.code;
+            foreach (TaskData task in tasks) {
+                if (codigo == task.tcode) {
+                    task.tname = taskName;
+                    task.tdescription = taskDescription;
+                    task.tduedate = taskDueDate;
+                    task.tdificulty = taskDificulty;
+                }
+            }
+        }
+        else {
+            Debug.Log("Add");
+            tasks.Add(new TaskData(taskCode, taskName, taskDescription, taskDificulty, taskDueDate, "", 1));
+        }
 
+        MainPersistence.Instance.code = "0";
         FileHandler.SaveToJSON<TaskData>(tasks, filename);
+        SceneManager.LoadScene(0);
     }
 
     public string GenerateCode() {
