@@ -51,6 +51,25 @@ public class TaskDataHandler : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void DeleteTask() {
+        if (MainPersistence.Instance.code == "0") {
+            Debug.Log("ERRO: Nenhum código selecionado");
+        }
+        else {
+            Debug.Log("Remove");
+            this.codigo = MainPersistence.Instance.code;
+            foreach (TaskData task in tasks) {
+                if (codigo == task.tcode) {
+                    tasks.Remove(task);
+                    MainPersistence.Instance.code = "0";
+                    FileHandler.SaveToJSON<TaskData>(tasks, filename);
+                    SceneManager.LoadScene(0);
+                    return;
+                }
+            }
+        }
+    }
+
     public string GenerateCode() {
         return System.Guid.NewGuid().ToString();
     }

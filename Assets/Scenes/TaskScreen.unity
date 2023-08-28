@@ -2890,7 +2890,6 @@ GameObject:
   - component: {fileID: 1459659214}
   - component: {fileID: 1459659213}
   - component: {fileID: 1459659212}
-  - component: {fileID: 1459659211}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2920,18 +2919,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1459659211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459659209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9810c33fe1367241916d48bd1bbd8f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1459659212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2976,10 +2963,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1459659211}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: MoveToScene
-        m_Mode: 3
+      - m_Target: {fileID: 1587945517}
+        m_TargetAssemblyTypeName: TaskDataHandler, Assembly-CSharp
+        m_MethodName: DeleteTask
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3249,6 +3236,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1587945516}
+  - component: {fileID: 1587945517}
   m_Layer: 0
   m_Name: Inputs
   m_TagString: Untagged
@@ -3279,6 +3267,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1587945517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587945515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dc16fb77a332b34486f9b2cc781407c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameInput: {fileID: 0}
+  descriptionInput: {fileID: 0}
+  duedateInput: {fileID: 0}
 --- !u!1 &1633296655
 GameObject:
   m_ObjectHideFlags: 0
