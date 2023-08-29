@@ -1,10 +1,5 @@
-namespace Gravitons.UI.Modal
+
+public class ModalContentBase
 {
-    /// <summary>
-    /// Base class for all modal content
-    /// </summary>
-    public class ModalContentBase
-    {
-        
-    }
+
 }

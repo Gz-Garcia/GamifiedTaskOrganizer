@@ -12,6 +12,7 @@ public class TaskDataHandler : MonoBehaviour
     [SerializeField] TMP_InputField nameInput;
     [SerializeField] TMP_InputField descriptionInput;
     [SerializeField] TMP_InputField duedateInput;
+    [SerializeField] GameObject screenBlur;
 
     private int taskDificulty = 1;
 
@@ -29,9 +30,13 @@ public class TaskDataHandler : MonoBehaviour
         string taskDescription = descriptionInput.text;
         string taskDueDate = duedateInput.text;
 
+        string modalTitle = "Missão adicionada";
+        bool isEditing = false;
+
         if (MainPersistence.Instance.code != "0") {
-            Debug.Log("Edit");
             this.codigo = MainPersistence.Instance.code;
+            isEditing = true;
+
             foreach (TaskData task in tasks) {
                 if (codigo == task.tcode) {
                     task.tname = taskName;
@@ -42,13 +47,17 @@ public class TaskDataHandler : MonoBehaviour
             }
         }
         else {
-            Debug.Log("Add");
             tasks.Add(new TaskData(taskCode, taskName, taskDescription, taskDificulty, taskDueDate, "", 1));
         }
 
         MainPersistence.Instance.code = "0";
         FileHandler.SaveToJSON<TaskData>(tasks, filename);
-        SceneManager.LoadScene(0);
+
+        screenBlur.SetActive(true);
+        if (isEditing) modalTitle = "Missão alterada";
+        ModalManager.Show(modalTitle, "Agora corra atraz de fazê-la!",
+        new[] { new ModalButton() { Text = "Home", Callback = ReturnHome }, 
+        new ModalButton() { Text = "Adicionar outra", Callback = AddOther}});
     }
 
     public void DeleteTask() {
@@ -56,7 +65,6 @@ public class TaskDataHandler : MonoBehaviour
             Debug.Log("ERRO: Nenhum código selecionado");
         }
         else {
-            Debug.Log("Remove");
             this.codigo = MainPersistence.Instance.code;
             foreach (TaskData task in tasks) {
                 if (codigo == task.tcode) {
@@ -77,4 +85,31 @@ public class TaskDataHandler : MonoBehaviour
     public void SetDificulty(int d) {
         this.taskDificulty = d;
     }
+
+    public void ReturnHome() {
+        screenBlur.SetActive(false);
+        SceneManager.LoadScene(0);
+    }
+
+    public void AddOther() {
+        screenBlur.SetActive(false);
+        SceneManager.LoadScene(1);
+    }
+
+    public void ConfirmDeletion() {
+        screenBlur.SetActive(true);
+        ModalManager.Show("Confirmação", "Deseja realmente excluir esta missão?",
+        new[] { new ModalButton() { Text = "Cancelar", Callback = CancelDeletion}, 
+        new ModalButton() { Text = "Excluir", Callback = DeleteConfirmation}});
+    }
+
+    public void DeleteConfirmation() {
+        ModalManager.Show("Missão Excluída", "Lembre-se de nunca desistir.",
+        new[] { new ModalButton() { Text = "Ok", Callback = DeleteTask}});
+    }
+
+    public void CancelDeletion() {
+        screenBlur.SetActive(false);
+    }
+
 }
