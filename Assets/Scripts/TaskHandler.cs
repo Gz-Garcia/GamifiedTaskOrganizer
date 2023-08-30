@@ -9,9 +9,10 @@ using System;
 using TMPro;
 
 public class TaskHandler : MonoBehaviour
-{   
-    public List<TaskData> tasks = new List<TaskData>();
+{
     private string filename = "tarefas.json";
+    private int completedTaskIndex;
+    public List<TaskData> tasks = new List<TaskData>(); 
     public TMP_Text taskName;
     public GameObject taskObject, codeHolder;
     public int sceneID;
@@ -25,16 +26,26 @@ public class TaskHandler : MonoBehaviour
         carregaLista();
 
         string codigo = codeHolder.name;
-        foreach (TaskData task in tasks) {
-            
+        foreach (TaskData task in tasks) { 
             if(codigo == task.tcode) {
-                if(task.tstate == 1) task.tstate = 0;
-                else task.tstate = 1;
+                int reward = CalcReward(task.tdificulty, task.tduedate);
+                if(task.tstate == 1) {
+                    task.tstate = 0;
+                    MainPersistence.Instance.CompleteTask(reward);
+                }
+                else {
+                    task.tstate = 1;
+                    MainPersistence.Instance.UncompleteTask(reward);
+                }
             }
         }
 
         taskObject.SetActive(false);
         FileHandler.SaveToJSON<TaskData>(tasks, filename);
+    }
+
+    public int CalcReward(int dificulty, string dueDate) {
+        return 2*dificulty;
     }
 
     public void LaunchTaskScreen() {

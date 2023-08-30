@@ -1,4 +1,3 @@
-using System.Dynamic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,8 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class TaskDataHandler : MonoBehaviour
-{
+public class TaskDataHandler : MonoBehaviour {
     [SerializeField] TMP_InputField nameInput;
     [SerializeField] TMP_InputField descriptionInput;
     [SerializeField] TMP_InputField duedateInput;
