@@ -8,7 +8,7 @@ public class SideMenuMovement : MonoBehaviour
 {
     
     public GameObject originalPos, activePos;
-    public GameObject menuPanel;
+    public GameObject menuPanel, imageIn, imageOut, blurPanel;
 
     private bool moveMenuIn, moveMenuBack;
     public float slideSpeed;
@@ -50,10 +50,22 @@ public class SideMenuMovement : MonoBehaviour
     public void MoveMenuIn (){
         moveMenuBack = false;
         moveMenuIn = true;
+        imageIn.SetActive(false);
+        imageOut.SetActive(true);
+        blurPanel.SetActive(true);
     }
 
     public void MoveMenuBack (){
         moveMenuIn = false;
         moveMenuBack = true;
+        imageOut.SetActive(false);
+        blurPanel.SetActive(false);
+        imageIn.SetActive(true);
+    }
+
+    public void SwitchMenu() {
+        if(imageIn.activeSelf){
+            MoveMenuIn();
+        } else MoveMenuBack();
     }
 }

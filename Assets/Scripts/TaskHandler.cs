@@ -45,7 +45,13 @@ public class TaskHandler : MonoBehaviour
     }
 
     public int CalcReward(int dificulty, string dueDate) {
-        return 2*dificulty;
+        
+        var dataEntrega = DateTime.Parse(dueDate);
+        var dif = dataEntrega - DateTime.Now;
+
+        int diasAdiantado = Convert.ToInt32(dif.Days);
+
+        return 5* (dificulty + diasAdiantado);
     }
 
     public void LaunchTaskScreen() {
