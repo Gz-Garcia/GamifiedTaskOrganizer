@@ -8,7 +8,7 @@ public class AssetList : MonoBehaviour
     public static AssetList Instance;
     public List<string> fontKeys;
     public List<TMP_FontAsset> fontValues;
-    public string defaultFont;
+    public string currentFont;
     private Dictionary<string, TMP_FontAsset> fontAssetDic;
     private void Awake() {
         if (Instance != null)
@@ -28,7 +28,12 @@ public class AssetList : MonoBehaviour
         return fontKeys;
     }
 
-    public string getDefaultFont() {
-        return defaultFont;
+    public string getCurrentFont() {
+        return currentFont;
+    }
+
+    public void setCurrentFont(string font)
+    {
+        this.currentFont = font;
     }
 }

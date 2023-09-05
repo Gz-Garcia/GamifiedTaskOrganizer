@@ -412,8 +412,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "AaAaAaAaAa\n\xE2\xE2\xE2\n\xC2\xC2\xD4\xD4\n\xC7\xC7\xC7\xC7\xC7"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f134a6fa7dad17444906fb9e9c4c1a85, type: 2}
+  m_sharedMaterial: {fileID: -5312391830687180354, guid: f134a6fa7dad17444906fb9e9c4c1a85, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -437,10 +437,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 36
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -602,54 +602,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentFont: Ubuntu
---- !u!1 &1985568570
-GameObject:
+--- !u!1001 &438140990919116401
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1985568571}
-  - component: {fileID: 1985568572}
-  m_Layer: 0
-  m_Name: AssetList
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1985568571
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985568570}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 335.11142, y: 947.92413, z: 25.350933}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1985568572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985568570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc2565d97b0984b4b98894f401eeca88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fontKeys:
-  - Ubuntu
-  - UbuntuBold
-  fontValues:
-  - {fileID: 11400000, guid: bae5dfdb42855654eba87fd8c731fe7f, type: 2}
-  - {fileID: 11400000, guid: 99ad4f58ba8e1794d9373a26e5dc3f71, type: 2}
-  defaultFont: Ubuntu
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 438140989540718922, guid: 94d36a82ca01e314fb7211d77e11e8b6, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 438140989540718922, guid: 94d36a82ca01e314fb7211d77e11e8b6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 335.11142
+      objectReference: {fileID: 0}
+    - target: {fileID: 438140989540718922, guid: 94d36a82ca01e314fb7211d77e11e8b6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 947.92413
+      objectReference: {fileID: 0}
+    - target: {fileID: 438140989540718922, guid: 94d36a82ca01e314fb7211d77e11e8b6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 25.350933
+      objectReference: {fileID: 0}
+    - target: {fileID: 438140989540718922, guid: 94d36a82ca01e314fb7211d77e11e8b6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 438140989540718922, guid: 94d36a82ca01e314fb7211d77e11e8b6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 438140989540718922, guid: 94d36a82ca01e314fb7211d77e11e8b6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 438140989540718922, guid: 94d36a82ca01e314fb7211d77e11e8b6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 438140989540718922, guid: 94d36a82ca01e314fb7211d77e11e8b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 438140989540718922, guid: 94d36a82ca01e314fb7211d77e11e8b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 438140989540718922, guid: 94d36a82ca01e314fb7211d77e11e8b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 438140989540718923, guid: 94d36a82ca01e314fb7211d77e11e8b6, type: 3}
+      propertyPath: m_Name
+      value: AssetList
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94d36a82ca01e314fb7211d77e11e8b6, type: 3}

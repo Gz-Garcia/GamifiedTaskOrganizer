@@ -14,6 +14,7 @@ public class UISettingsLoader : MonoBehaviour
     void Start() {
         fontKeys = AssetList.Instance.getFontKeysList();
         fontValues = AssetList.Instance.getFontAssetList();
+        currentFont = AssetList.Instance.getCurrentFont();
 
         Filldictionary();
         StartCoroutine("FontUpdate");
@@ -36,12 +37,20 @@ public class UISettingsLoader : MonoBehaviour
         }
     }
 
+    public void ChangeFont(string fontName) {
+        this.currentFont = fontName;
+        AssetList.Instance.setCurrentFont(this.currentFont);
+    }
+
     IEnumerator FontUpdate() {
         tmpTexts = GetComponentsInChildren<TMP_Text>(true);
         foreach (TMP_Text text in tmpTexts) {
-            text.font = fontAssetDic[currentFont];
+            if(text.tag != "StaticFont") {
+                text.font = fontAssetDic[currentFont];
+            }
+            
         }
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         StartCoroutine("FontUpdate");
     }
 }
