@@ -1,21 +1,12 @@
-Font: Noto Sans New Tai Lue  Style: Regular
-Point Size: 42   SP/PD Ratio: 11,9%
+Font: Teko  Style: Light
+Point Size: 57   SP/PD Ratio: 8,8%
 
-Characters included: 195/306
-Missing characters: 111
+Characters included: 209/306
+Missing characters: 97
 Excluded characters: 0
 
 Characters missing from font file:
 ----------------------------------------
-ID: 164	Hex: A4	Char [¤]
-ID: 166	Hex: A6	Char [¦]
-ID: 172	Hex: AC	Char [¬]
-ID: 173	Hex: AD	Char [­]
-ID: 177	Hex: B1	Char [±]
-ID: 178	Hex: B2	Char [²]
-ID: 179	Hex: B3	Char [³]
-ID: 181	Hex: B5	Char [µ]
-ID: 185	Hex: B9	Char [¹]
 ID: 188	Hex: BC	Char [¼]
 ID: 189	Hex: BD	Char [½]
 ID: 190	Hex: BE	Char [¾]
@@ -30,7 +21,6 @@ ID: 8199	Hex: 2007	Char [ ]
 ID: 8200	Hex: 2008	Char [ ]
 ID: 8201	Hex: 2009	Char [ ]
 ID: 8202	Hex: 200A	Char [ ]
-ID: 8203	Hex: 200B	Char [​]
 ID: 8206	Hex: 200E	Char [‎]
 ID: 8207	Hex: 200F	Char [‏]
 ID: 8208	Hex: 2010	Char [‐]
@@ -41,8 +31,6 @@ ID: 8214	Hex: 2016	Char [‖]
 ID: 8215	Hex: 2017	Char [‗]
 ID: 8219	Hex: 201B	Char [‛]
 ID: 8223	Hex: 201F	Char [‟]
-ID: 8224	Hex: 2020	Char [†]
-ID: 8225	Hex: 2021	Char [‡]
 ID: 8227	Hex: 2023	Char [‣]
 ID: 8228	Hex: 2024	Char [․]
 ID: 8229	Hex: 2025	Char [‥]
@@ -55,7 +43,6 @@ ID: 8236	Hex: 202C	Char [‬]
 ID: 8237	Hex: 202D	Char [‭]
 ID: 8238	Hex: 202E	Char [‮]
 ID: 8239	Hex: 202F	Char [ ]
-ID: 8240	Hex: 2030	Char [‰]
 ID: 8241	Hex: 2031	Char [‱]
 ID: 8242	Hex: 2032	Char [′]
 ID: 8243	Hex: 2033	Char [″]
@@ -73,7 +60,6 @@ ID: 8256	Hex: 2040	Char [⁀]
 ID: 8257	Hex: 2041	Char [⁁]
 ID: 8258	Hex: 2042	Char [⁂]
 ID: 8259	Hex: 2043	Char [⁃]
-ID: 8260	Hex: 2044	Char [⁄]
 ID: 8261	Hex: 2045	Char [⁅]
 ID: 8262	Hex: 2046	Char [⁆]
 ID: 8263	Hex: 2047	Char [⁇]
