@@ -45,8 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fontKeys:
-  - Itim
-  - FiraCode
   - RussoOne
   - AbrilFatface
   - ADLaM
@@ -55,21 +53,15 @@ MonoBehaviour:
   - ComicSans
   - IndieFlower
   - Lobster
-  - Rubik
-  - Teko
   - Ubuntu
   fontValues:
-  - {fileID: 11400000, guid: 43a5a1164fbf35e4a9766e17cd2d29d3, type: 2}
-  - {fileID: 11400000, guid: cbaed34efc9e33842a0db0708b92d750, type: 2}
   - {fileID: 11400000, guid: 250764c1622b4d749886f69f3d8fceb2, type: 2}
   - {fileID: 11400000, guid: 6934059b710c9b242a72a19adc99d67c, type: 2}
   - {fileID: 11400000, guid: 9613ad4a1366931458ac46173383915c, type: 2}
   - {fileID: 11400000, guid: d2b305ec548884f42b22566ce36b195c, type: 2}
   - {fileID: 11400000, guid: 60f721d4d96eae84d88db05e6dbadde9, type: 2}
   - {fileID: 11400000, guid: c0a1b337f0c3ead4c847f520f628905b, type: 2}
-  - {fileID: 11400000, guid: 8aa38149d8826f14bad702c9e253a565, type: 2}
   - {fileID: 11400000, guid: e3d3303daa157864cb3f8039063fff9d, type: 2}
   - {fileID: 11400000, guid: fc940f941670be54ca6d3f528c4eb64d, type: 2}
-  - {fileID: 11400000, guid: 608e84daec6aab8498a27963aaffb6da, type: 2}
   - {fileID: 11400000, guid: bae5dfdb42855654eba87fd8c731fe7f, type: 2}
   currentFont: Ubuntu

@@ -50,6 +50,12 @@ public class MainPersistence : MonoBehaviour
             SavePlayerInfo();
         }
     }
+
+    public void SpendGold(int gold) {
+        playerData.gold -= gold;
+        SavePlayerInfo();
+    }
+
     void OnDestroy()
     {
         SavePlayerInfo();

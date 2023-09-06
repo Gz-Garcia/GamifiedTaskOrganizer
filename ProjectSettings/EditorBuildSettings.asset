@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/HabitView.unity
     guid: e3cbaf4bfb217434d96df20d1c0885ff
   - enabled: 1
-    path: Assets/Scenes/CompletedTask.unity
+    path: Assets/Scenes/CompletedTasks.unity
     guid: ba73f7617b4c32d4da00f4710d888bf6
   - enabled: 1
     path: Assets/Scenes/Profile.unity
