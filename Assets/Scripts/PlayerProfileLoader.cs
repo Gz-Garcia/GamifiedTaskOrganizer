@@ -19,7 +19,7 @@ public class PlayerProfileLoader : MonoBehaviour
 
     void LoadFields() {
         playerName.text = player.name;
-        playerLevel.text = "Level " + player.level.ToString();
+        playerLevel.text = "Nível " + player.level.ToString();
         playerXp.text = player.xp.ToString() + " XP";
         playerCoins.text = "$ " + player.gold.ToString();
     }
